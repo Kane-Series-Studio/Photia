@@ -40,8 +40,12 @@ input::-webkit-color-swatch {
 }
 
 canvas[resize] {
-  z-index: 2;
-  width: 100%;
-  height: 100%;
+  width: 700px;
+   height: 420px;
   border: red 2px solid;
+}
+#strokeSize{
+  width: 200px;
+  position: absolute;
+  top: 50vh;
 }

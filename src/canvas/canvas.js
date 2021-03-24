@@ -12,14 +12,16 @@ window.addEventListener('load', () => {
     //VARIABLES
     let painting = false;
 
-    function startPosition() {
+    function startPosition(e) {
         painting = true;
+        draw(e);
     }
     function finishedPosition() {
         painting = false;
+        ctx.beginPath();
     }
 
-    function draw(){
+    function draw(e){
         var e = window.event;
         if(!painting) return;
 
@@ -28,6 +30,8 @@ window.addEventListener('load', () => {
         ctx.strokeStyle = x;
         ctx.lineTo(e.clientX, e.clientY)
         ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(e.clientX, e.clientY)
     }
 
     //EVENT  LISTENERS
