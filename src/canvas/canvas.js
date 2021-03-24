@@ -15,8 +15,13 @@ window.addEventListener('load', () => {
         painting = false;
     }
 
+    function draw(e){
+        if(!painting) return;
+    }
+
     //EVENT  LISTENERS
     canvas.addEventListener('mousedown', startPosition);
     canvas.addEventListener('mouseup', finishedPosition)
+    canvas.addEventListener('mousemove', draw)
 
 })
