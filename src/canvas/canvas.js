@@ -1,7 +1,6 @@
 window.addEventListener('load', ()=>{
     const canvas = document.querySelector('#canvas');
     const ctx = canvas.getContext("2d");
-    const frame = document.getElementById("img-display");
     //Resizing
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
@@ -15,6 +14,8 @@ window.addEventListener('load', ()=>{
     function finishedPosition(){
         painting = false;
     }
-    
+
     //EVENT  LISTENERS
+    canvas.addEventListener('mousedown', 
+    startPosition)
 })
