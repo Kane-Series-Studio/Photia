@@ -1,6 +1,10 @@
 window.addEventListener('load', () => {
+
     const canvas = document.querySelector('#canvas');
     const ctx = canvas.getContext("2d");
+    
+    var x = document.getElementById("colour-picker").value;
+
     //Resizing
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
@@ -15,12 +19,13 @@ window.addEventListener('load', () => {
         painting = false;
     }
 
-    function draw(e){
+    function draw(){
+        var e = window.event;
         if(!painting) return;
 
         ctx.lineWidth = 10;
         ctx.lineCap = 'round';
-
+        ctx.strokeStyle = x;
         ctx.lineTo(e.clientX, e.clientY)
         ctx.stroke();
     }
