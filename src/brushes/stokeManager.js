@@ -1,8 +1,10 @@
-const strokeSlider = document.getElementById('strokeSize');
-
-const strokeSliderValue = () => {
-    const strokeValue = strokeSlider.value;
-
-    console.log(`Stroke set to ${strokeValue}`);
+var str;
+const strokeSlider = document.getElementById("strokeSize").value;
+if(strokeSlider != null){
+    str = strokeSlider.value;
+}else{
+    console.log("0")
 }
-exports.strokeSliderValue = strokeSliderValue;
+
+
+//exports.strokeSliderValue = strokeSliderValue;

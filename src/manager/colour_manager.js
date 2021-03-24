@@ -9,6 +9,5 @@ setInterval(() => {
     var y = document.getElementById("valueHEX").style.color = `${x}`
 
 document.getElementById("valueHEX").innerHTML = x;
-exports.colour = colour;
 }, 100);
 
