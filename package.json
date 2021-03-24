@@ -46,7 +46,8 @@
   },
   "dependencies": {
     "electron-menu": "^1.0.0",
-    "electron-squirrel-startup": "^1.0.0"
+    "electron-squirrel-startup": "^1.0.0",
+    "paper": "^0.12.15"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.54",

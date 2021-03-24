@@ -8,14 +8,22 @@
 </head>
 <body>
   <script src="./manager/colour_manager.js"></script>
-
+  <script src="./brushes/pathCreator.js"></script>
   <div id="tool-bar">
     <input type="color" id="colour-picker">
     <h1 id="valueHEX">HEX PLACEHOLDER</h1>
   </div>
 
   <div id="img-display">
-
+    <canvas id="myCanvas" resize></canvas>
   </div>
 </body>
 </html>
+
+<script type="text/paperscript" canvas="myCanvas">
+	var path = new Path();
+	path.strokeColor = 'black';
+	var start = new Point(100, 100);
+	path.moveTo(start);
+	path.lineTo(start + [ 100, -50 ]);
+</script>
