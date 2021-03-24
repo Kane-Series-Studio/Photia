@@ -24,3 +24,12 @@ body {
   left: 22vw;
   top: 11vh;
 }
+
+#colour-picker{
+  width: 19.7vw;
+  height: 8vh;
+  position: absolute;
+}
+input::-webkit-color-swatch {
+  border: none;
+}
