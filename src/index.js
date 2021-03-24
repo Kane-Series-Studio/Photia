@@ -24,7 +24,7 @@ const createWindow = () => {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 
-app.on('ready', function(){
+app.on('ready', function () {
   createWindow();
   const template = [
     {
@@ -37,13 +37,87 @@ app.on('ready', function(){
           label: 'New window'
         },
         {
+          type: 'separator'
+        },
+        {
           label: "Open Image"
-        }
+        },
+        {
+          type: 'separator'
+        },
+        {
+          label: 'Export as PNG'
+        },
+        {
+          label: 'Export as JPEG'
+        },
+        {
+          label: 'Export as other'
+        },
+        {
+          type: 'separator'
+        },
+        {
+          label: 'Save Project as'
+        },
+      ]
+    },
+    {
+      label: "Edit",
+      submenu: [
+        {
+          label: "Undo"
+        },
+        {
+          label: "Redo"
+        },
+        {
+          type: 'separator'
+        },
+        {
+          label: "Fade"
+        },
+        {
+          label: "Darken"
+        },
+        {
+          type: 'separator'
+        },
+        {
+          label: "Copy",
+          role: "copy"
+        },
+        {
+          label: "Paste",
+          role: "paste"
+        },
+        {
+          label: "Cut",
+          role: "cut"
+        },
+      ]
+    },
+    {
+      label: "Settings",
+      submenu: [
+        {
+          label: "Colour Palletes"
+        },
+        {
+          label: "prefrences"
+        },
+        {
+          type: 'separator'
+        },
+        {
+          label: "Exit",
+          role: "quit"
+        },
       ]
     }
   ]
- const menu = Menu.buildFromTemplate(template);
- Menu.setApplicationMenu(menu);
+  const menu = Menu.buildFromTemplate(template);
+  Menu.setApplicationMenu(menu);
 })
 
 
