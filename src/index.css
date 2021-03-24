@@ -33,3 +33,7 @@ body {
 input::-webkit-color-swatch {
   border: none;
 }
+#valueHEX{
+  position: absolute;
+  top: 86vh;
+}
