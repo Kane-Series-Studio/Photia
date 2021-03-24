@@ -9,5 +9,12 @@ window.addEventListener('load', ()=>{
     //VARIABLES
     let painting = false;
 
+    function startPosition(){
+        painting = true;
+    }
+    function finishedPosition(){
+        painting = false;
+    }
+    
     //EVENT  LISTENERS
 })
