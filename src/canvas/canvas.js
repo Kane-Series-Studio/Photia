@@ -112,3 +112,6 @@ var canvas, ctx, flag = false,
             }
         }
     }
+window.addEventListener('load', ()=>{
+    confirm("This is a developer release. Please comfirm you you are a developer")
+})
