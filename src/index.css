@@ -49,3 +49,10 @@ canvas[resize] {
   position: absolute;
   top: 50vh;
 }
+
+#can{
+  position: absolute;
+  left: 22vw;
+  width:  75vw;
+  height: 92vh;
+}
