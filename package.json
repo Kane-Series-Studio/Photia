@@ -47,6 +47,7 @@
   "dependencies": {
     "electron-menu": "^1.0.0",
     "electron-squirrel-startup": "^1.0.0",
+    "nedb": "^1.8.0",
     "paper": "^0.12.15"
   },
   "devDependencies": {

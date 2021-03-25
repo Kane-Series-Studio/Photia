@@ -40,10 +40,10 @@ input::-webkit-color-swatch {
 }
 
 canvas[resize] {
-  width: 700px;
-   height: 420px;
-  border: red 2px solid;
+
+  border: transparent 2px solid;
 }
+
 #strokeSize{
   width: 200px;
   position: absolute;
