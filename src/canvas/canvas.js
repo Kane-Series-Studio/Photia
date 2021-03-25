@@ -10,6 +10,11 @@ window.addEventListener('load', () => {
     colourPicker.addEventListener('input', updateFirst, false);
     colourPicker.addEventListener('change', watchColorPicker,false);
 
+    function watchColorPicker(event){
+        colourPicker.forEach(function(p){
+            p.style.color = event.target.color
+        })
+    }
     //Resizing
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
