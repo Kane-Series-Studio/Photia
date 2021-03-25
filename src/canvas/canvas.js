@@ -3,7 +3,12 @@ window.addEventListener('load', () => {
     const canvas = document.querySelector('#canvas');
     const ctx = canvas.getContext("2d");
     
-    var x = document.getElementById("colour-picker").value;
+
+    // TRACK COLOUR CHANGE
+    var colourPicker = document.getElementById("colour-picker");
+
+    colourPicker.addEventListener('input', updateFirst, false);
+    colourPicker.addEventListener('change', watchColorPicker,false);
 
     //Resizing
     canvas.width = window.innerWidth
