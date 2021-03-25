@@ -2,19 +2,17 @@ window.addEventListener('load', () => {
 
     const canvas = document.querySelector('#canvas');
     const ctx = canvas.getContext("2d");
-    
+
 
     // TRACK COLOUR CHANGE
-    var colourPicker = document.getElementById("colour-picker");
 
-    colourPicker.addEventListener('input', updateFirst, false);
-    colourPicker.addEventListener('change', watchColorPicker,false);
 
-    function watchColorPicker(event){
-        colourPicker.forEach(function(p){
-            p.style.color = event.target.color
-        })
-    }
+    // Stroke Size Caller
+    const stroke_size = document.getElementById("strokeSize").value;
+    setInterval(() => {
+        console.log(stroke_size)
+    }, 1);
+
     //Resizing
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
@@ -31,17 +29,24 @@ window.addEventListener('load', () => {
         ctx.beginPath();
     }
 
-    function draw(e){
-        var e = window.event;
-        if(!painting) return;
+    function colour_change(){
+        console.log('CHANGED')
+    }
 
+    function draw(e) {
+        setInterval(() => {
+        var e = window.event;
+        var x = document.getElementById("colour-picker").value;
+        if (!painting) return;    
         ctx.lineWidth = 10;
         ctx.lineCap = 'round';
-        ctx.strokeStyle = x;
+        ctx.strokeStyle = `${x}`;
         ctx.lineTo(e.clientX, e.clientY)
         ctx.stroke();
         ctx.beginPath();
-        ctx.moveTo(e.clientX, e.clientY)
+        ctx.moveTo(e.clientX, e.clientY) 
+        }, 1);
+
     }
 
     //EVENT  LISTENERS
